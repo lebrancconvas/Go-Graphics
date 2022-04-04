@@ -3,12 +3,24 @@ package main
 import (
 	"log"
     "image/color"
+    _ "image/png"
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
 );
 
+var img *ebiten.Image;
+
 // Create Game Struct 
 type Game struct{};
+
+func init() {
+    var err error;
+    img, _, err = ebitenutil.NewImageFromFile("./assets/visual/sprite/character/Cat_32.png");
+
+    if err != nil {
+        log.Fatal(err);
+    }
+}
 
 // Update
 func (g *Game) Update() error {
@@ -25,6 +37,8 @@ func (g *Game) Draw(screen *ebiten.Image) {
     // Text Log. 
     messageText := "Debug Log Test.";
 	ebitenutil.DebugPrint(screen, messageText);
+
+    screen.DrawImage(img, nil);
 }
 
 

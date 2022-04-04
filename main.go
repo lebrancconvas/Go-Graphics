@@ -8,6 +8,9 @@ import (
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
 );
 
+const screenWidth int = 800;
+const screenHeight int = 600; 
+
 var img *ebiten.Image;
 
 // Create Game Struct 
@@ -48,7 +51,7 @@ func (g *Game) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeigh
 }
 
 func main() {
-	ebiten.SetWindowSize(640, 480);
+	ebiten.SetWindowSize(screenWidth, screenHeight);
 	ebiten.SetWindowTitle("Test Ebiten GUI");
 	if err := ebiten.RunGame(&Game{}); err != nil {
 		log.Fatal(err);

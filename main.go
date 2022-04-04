@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-    "image/color"
+    "image/color"   
     _ "image/png"
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"

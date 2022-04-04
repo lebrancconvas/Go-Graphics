@@ -36,7 +36,7 @@ func (g *Game) Draw(screen *ebiten.Image) {
 
     // Text Log. 
     messageText := "Debug Log Test.";
-	ebitenutil.DebugPrint(screen, messageText);
+    ebitenutil.DebugPrint(screen, messageText);
 
     screen.DrawImage(img, nil);
 }

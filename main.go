@@ -8,8 +8,10 @@ import (
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
 );
 
-const screenWidth int = 800;
-const screenHeight int = 600; 
+const (
+    screenWidth int = 800;
+    screenHeight int = 600;
+)
 
 var img *ebiten.Image;
 
